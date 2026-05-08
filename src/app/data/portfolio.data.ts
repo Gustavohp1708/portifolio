@@ -35,7 +35,7 @@ export const profile = {
   name: 'Gustavo Carvalho',
   title: 'Desenvolvedor Back-end | Java',
   photoInitials: 'LI',
-  photoUrl: '/assets/foto-perfil.jpeg',
+  photoUrl: 'assets/foto-perfil.jpeg',
   contact: [
     {
       label: 'E-mail',
@@ -73,7 +73,7 @@ export const stacks = [
 
 export const aboutText = [
   'Atuação no desenvolvimento de APIs REST com Java e Spring Boot, integração entre sistemas e construção de soluções com Inteligência Artificial. Conhecimento em autenticação e segurança com JWT e Spring Security, persistência de dados com JPA/Hibernate, modelagem relacional com MySQL e versionamento de banco utilizando Flyway. Também possuo  conhecimentos com desenvolvimento front-end utilizando Angular, JavaScript, TypeScript, HTML e CSS.',
-  'Fiz minha transição de carreira para a área de tecnologia e tive minha primeira experiência profissional, onde pude colocar em prática os conhecimentos adquiridos e contribuir com o projeto que estava atuando. Venho sempre me dedicando ao aprendizado e aprimoramento das minhas habilidades técnicas, buscando sempre me manter atualizado com as tendências do mercado e as melhores práticas de desenvolvimento.'
+  'Fiz minha transição de carreira para a área de tecnologia e tive minha primeira experiência profissional, onde pude colocar em prática os conhecimentos adquiridos e contribuir com o projeto que estava atuando. Venho sempre me dedicando ao aprendizado e aprimorando minhas habilidades técnicas, buscando sempre me manter atualizado com as tendências do mercado e as melhores práticas de desenvolvimento.'
 ];
 
 export const knowledgeItems: KnowledgeItem[] = [
@@ -155,27 +155,30 @@ export const certificates: Certificate[] = [
     issuer: 'Udemy',
     period: '2022',
     description: 'Certificado de conclusao do curso Java 2022 COMPLETO Do Zero ao Profissional + Projetos.',
-    image: '/assets/Certificado - Java 2022 COMPLETO Do Zero ao Profissional + Projetos!_page-0001.jpg'
+    image: 'assets/Certificado - Java 2022 COMPLETO Do Zero ao Profissional + Projetos!_page-0001.jpg'
   },
+
   {
     title: 'Spring Boot 3 - API REST em Java',
     issuer: 'Alura',
     period: '2024',
     description: 'Certificado de conclusao do curso Spring Boot 3 - desenvolva uma API Rest em Java.',
-    image: '/assets/Spring Boot 3 - desenvolva uma API Rest em Java_page-0001.jpg'
+    image: 'assets/Spring Boot 3 - desenvolva uma API Rest em Java_page-0001.jpg'
   },
+
   {
     title: 'Spring Boot 3 - Boas Praticas e Seguranca',
     issuer: 'Alura',
     period: '2024',
     description: 'Certificado de conclusao do curso Spring Boot 3 - aplique boas praticas e proteja uma API Rest.',
-    image: '/assets/Spring Boot 3 - aplique boas práticas e proteja uma API Rest_page-0001.jpg'
+    image: 'assets/Spring Boot 3 - aplique boas práticas e proteja uma API Rest_page-0001.jpg'
   },
+
   {
     title: 'Certificado de Conclusao',
     issuer: 'Instituicao de Ensino',
     period: '2023',
     description: 'Certificado de conclusao academica de Gustavo da Silva Carvalho.',
-    image: '/assets/Certificado de Conclusão - Gustavo da Silva Carvalho_page-0001.jpg'
+    image: 'assets/Certificado de Conclusão - Gustavo da Silva Carvalho_page-0001.jpg'
   }
 ];
