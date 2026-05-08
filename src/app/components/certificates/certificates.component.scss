@@ -111,10 +111,8 @@ h2 {
   border-color: var(--color-border-strong);
 }
 
-.certificate-card__placeholder,
+.certificate-card__image,
 .lightbox-card__preview {
-  display: grid;
-  place-items: center;
   border: 1px dashed rgba(185, 104, 255, 0.46);
   border-radius: var(--radius-md);
   background:
@@ -122,8 +120,12 @@ h2 {
     repeating-linear-gradient(135deg, transparent 0 14px, rgba(255, 255, 255, 0.04) 14px 15px);
 }
 
-.certificate-card__placeholder {
-  min-height: 118px;
+.certificate-card__image {
+  width: 100%;
+  height: 148px;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .certificate-card strong,
@@ -156,7 +158,11 @@ h2 {
 }
 
 .lightbox-card__preview {
+  width: 100%;
+  max-height: 62vh;
   min-height: 360px;
+  display: block;
+  object-fit: contain;
   margin-bottom: 22px;
   color: var(--color-lilac);
   font-weight: 800;

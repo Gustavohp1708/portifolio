@@ -8,14 +8,14 @@
           <p>Galeria</p>
           <h2 id="certificates-title">Certificados/Cursos</h2>
         </div>
-        <button class="icon-button" type="button" aria-label="Fechar galeria" (click)="closeGallery()">×</button>
+        <button class="icon-button" type="button" aria-label="Fechar galeria" (click)="closeGallery()">x</button>
       </header>
 
       <div class="certificate-grid">
         <button class="certificate-card" type="button" *ngFor="let certificate of certificates" (click)="selectCertificate(certificate)">
-          <span class="certificate-card__placeholder"></span>
+          <img class="certificate-card__image" [src]="certificate.image" [alt]="certificate.title">
           <strong>{{ certificate.title }}</strong>
-          <small>{{ certificate.issuer }} • {{ certificate.period }}</small>
+          <small>{{ certificate.issuer }} - {{ certificate.period }}</small>
           <p>{{ certificate.description }}</p>
         </button>
       </div>
@@ -24,12 +24,10 @@
 
   <div class="lightbox-backdrop" *ngIf="selectedCertificate" (click)="closeCertificate()">
     <article class="lightbox-card" role="dialog" aria-modal="true" (click)="$event.stopPropagation()">
-      <button class="icon-button" type="button" aria-label="Fechar certificado" (click)="closeCertificate()">×</button>
-      <div class="lightbox-card__preview">
-        <span>Placeholder</span>
-      </div>
+      <button class="icon-button" type="button" aria-label="Fechar certificado" (click)="closeCertificate()">x</button>
+      <img class="lightbox-card__preview" [src]="selectedCertificate.image" [alt]="selectedCertificate.title">
       <h3>{{ selectedCertificate.title }}</h3>
-      <strong>{{ selectedCertificate.issuer }} • {{ selectedCertificate.period }}</strong>
+      <strong>{{ selectedCertificate.issuer }} - {{ selectedCertificate.period }}</strong>
       <p>{{ selectedCertificate.description }}</p>
     </article>
   </div>

@@ -1,10 +1,12 @@
 <aside class="sidebar">
   <div class="profile">
-    <div class="profile__photo" aria-label="Espaço para foto de perfil">
-      <span>{{ photoInitials }}</span>
+    <div class="profile__photo" aria-label="Foto de perfil">
+      <img *ngIf="photoUrl; else initialsFallback" [src]="photoUrl" [alt]="'Foto de ' + name">
+      <ng-template #initialsFallback>
+        <span>{{ photoInitials }}</span>
+      </ng-template>
     </div>
     <div>
-      <p class="profile__eyebrow">Portfolio</p>
       <h1>{{ name }}</h1>
       <p class="profile__title">{{ title }}</p>
     </div>
