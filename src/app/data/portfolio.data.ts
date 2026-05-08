@@ -79,7 +79,7 @@ export const aboutText = [
 export const knowledgeItems: KnowledgeItem[] = [
   {
     title: 'Desenvolvimento Back-end',
-    description: 'Desenvolvimento e manutenção de APIs RESTful utilizando Java e Spring Boot, com foco em boas práticas de arquitetura. Autenticação e segurança com JWT e Spring Security.'
+    description: 'Desenvolvimento e manutenção de APIs RESTful utilizando Java e Spring Boot, com foco em boas práticas de arquitetura.'
   },
   {
     title: 'Autenticação e Segurança',
@@ -153,7 +153,7 @@ export const certificates: Certificate[] = [
   {
     title: 'Java 2022 Completo',
     issuer: 'Udemy',
-    period: '2022',
+    period: '2023',
     description: 'Certificado de conclusao do curso Java 2022 COMPLETO Do Zero ao Profissional + Projetos.',
     image: 'assets/Certificado - Java 2022 COMPLETO Do Zero ao Profissional + Projetos!_page-0001.jpg'
   },
@@ -161,7 +161,7 @@ export const certificates: Certificate[] = [
   {
     title: 'Spring Boot 3 - API REST em Java',
     issuer: 'Alura',
-    period: '2024',
+    period: '2026',
     description: 'Certificado de conclusao do curso Spring Boot 3 - desenvolva uma API Rest em Java.',
     image: 'assets/Spring Boot 3 - desenvolva uma API Rest em Java_page-0001.jpg'
   },
@@ -169,16 +169,16 @@ export const certificates: Certificate[] = [
   {
     title: 'Spring Boot 3 - Boas Praticas e Seguranca',
     issuer: 'Alura',
-    period: '2024',
+    period: '2026',
     description: 'Certificado de conclusao do curso Spring Boot 3 - aplique boas praticas e proteja uma API Rest.',
     image: 'assets/Spring Boot 3 - aplique boas práticas e proteja uma API Rest_page-0001.jpg'
   },
 
   {
-    title: 'Certificado de Conclusao',
-    issuer: 'Instituicao de Ensino',
+    title: 'Certificado de Conclusao - Faculdade',
+    issuer: 'Faculdade Impacta Tecnologia',
     period: '2023',
-    description: 'Certificado de conclusao academica de Gustavo da Silva Carvalho.',
+    description: 'Certificado de conclusao de curso superior em Análise e Desenvolvimento de Sistemas.',
     image: 'assets/Certificado de Conclusão - Gustavo da Silva Carvalho_page-0001.jpg'
   }
 ];
