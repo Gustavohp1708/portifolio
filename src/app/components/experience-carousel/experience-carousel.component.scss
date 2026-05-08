@@ -1,8 +1,8 @@
 .section-toolbar {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px;
+  justify-content: flex-start;
+  gap: 18px;
 }
 
 .carousel-actions {
@@ -31,7 +31,7 @@ button:hover {
 .experience-carousel {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(300px, 48%);
+  grid-auto-columns: 100%;
   gap: 18px;
   overflow-x: auto;
   padding: 2px 2px 18px;
@@ -80,10 +80,6 @@ p {
 
 @media (max-width: 720px) {
   .section-toolbar {
-    display: grid;
-  }
-
-  .experience-carousel {
-    grid-auto-columns: minmax(260px, 88%);
+    gap: 12px;
   }
 }

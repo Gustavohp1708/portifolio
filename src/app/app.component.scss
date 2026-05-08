@@ -5,8 +5,9 @@
 }
 
 .main-content {
-  width: min(100%, 1180px);
-  padding: 40px clamp(20px, 5vw, 64px) 64px;
+  justify-self: center;
+  width: min(100%, 1080px);
+  padding: 36px clamp(20px, 4vw, 48px) 64px;
 }
 
 .hero-panel,
@@ -21,12 +22,11 @@
 .hero-panel {
   position: relative;
   overflow: hidden;
-  min-height: 300px;
+  min-height: auto;
   display: grid;
-  align-content: end;
-  gap: 18px;
-  padding: clamp(28px, 6vw, 56px);
-  margin-bottom: 42px;
+  gap: 14px;
+  padding: clamp(22px, 4vw, 32px);
+  margin-bottom: 38px;
 }
 
 .hero-panel::before {
@@ -55,10 +55,10 @@
 }
 
 .hero-panel h2 {
-  max-width: 780px;
+  max-width: 720px;
   margin: 0;
-  font-size: clamp(2.2rem, 6vw, 5rem);
-  line-height: 0.98;
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+  line-height: 1.12;
 }
 
 .hero-panel p:last-child {
@@ -100,9 +100,5 @@
 @media (max-width: 560px) {
   .main-content {
     padding-inline: 16px;
-  }
-
-  .hero-panel {
-    min-height: 360px;
   }
 }
