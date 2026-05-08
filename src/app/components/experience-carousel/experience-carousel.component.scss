@@ -1,0 +1,89 @@
+.section-toolbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.carousel-actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: rgba(124, 45, 242, 0.14);
+  color: var(--color-text);
+  font-size: 1.7rem;
+  line-height: 1;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-border-strong);
+  background: rgba(185, 104, 255, 0.22);
+}
+
+.experience-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(300px, 48%);
+  gap: 18px;
+  overflow-x: auto;
+  padding: 2px 2px 18px;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: var(--color-purple-neon) rgba(255, 255, 255, 0.08);
+}
+
+.experience-card {
+  scroll-snap-align: start;
+  min-height: 250px;
+  padding: 26px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, rgba(42, 13, 69, 0.72), rgba(11, 9, 17, 0.82)),
+    linear-gradient(90deg, rgba(185, 104, 255, 0.14), transparent);
+  box-shadow: var(--shadow-card);
+}
+
+.experience-card__period {
+  width: fit-content;
+  margin: 0 0 18px;
+  padding: 7px 10px;
+  border: 1px solid rgba(185, 104, 255, 0.26);
+  border-radius: 999px;
+  color: var(--color-lilac);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+h3 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+strong {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--color-purple-neon);
+}
+
+p {
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+
+@media (max-width: 720px) {
+  .section-toolbar {
+    display: grid;
+  }
+
+  .experience-carousel {
+    grid-auto-columns: minmax(260px, 88%);
+  }
+}

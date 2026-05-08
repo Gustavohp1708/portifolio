@@ -1,5 +1,108 @@
-.portfolio-shell {
+.portfolio-layout {
   min-height: 100vh;
   display: grid;
-  place-items: center;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+}
+
+.main-content {
+  width: min(100%, 1180px);
+  padding: 40px clamp(20px, 5vw, 64px) 64px;
+}
+
+.hero-panel,
+.about-card {
+  border: 1px solid var(--color-border);
+  border-radius: 22px;
+  background: var(--color-surface);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-card);
+}
+
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  display: grid;
+  align-content: end;
+  gap: 18px;
+  padding: clamp(28px, 6vw, 56px);
+  margin-bottom: 42px;
+}
+
+.hero-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(120deg, rgba(5, 5, 9, 0.46), rgba(42, 13, 69, 0.55)),
+    repeating-linear-gradient(90deg, rgba(185, 104, 255, 0.09) 0 1px, transparent 1px 64px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 64px);
+}
+
+.hero-panel__eyebrow {
+  width: fit-content;
+  margin: 0;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  color: var(--color-lilac);
+  background: rgba(124, 45, 242, 0.18);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.hero-panel h2 {
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  line-height: 0.98;
+}
+
+.hero-panel p:last-child {
+  max-width: 660px;
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.content-section {
+  margin-top: 44px;
+}
+
+.about-card {
+  display: grid;
+  gap: 16px;
+  padding: clamp(22px, 4vw, 32px);
+}
+
+.about-card p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 900px) {
+  .portfolio-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    width: 100%;
+    padding-top: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .main-content {
+    padding-inline: 16px;
+  }
+
+  .hero-panel {
+    min-height: 360px;
+  }
 }

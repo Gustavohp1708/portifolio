@@ -1,0 +1,36 @@
+<section class="certificates-section">
+  <button class="certificates-button" type="button" (click)="openGallery()">Certificados/Cursos</button>
+
+  <div class="gallery-backdrop" *ngIf="isGalleryOpen" (click)="closeGallery()">
+    <div class="gallery-modal" role="dialog" aria-modal="true" aria-labelledby="certificates-title" (click)="$event.stopPropagation()">
+      <header>
+        <div>
+          <p>Galeria</p>
+          <h2 id="certificates-title">Certificados/Cursos</h2>
+        </div>
+        <button class="icon-button" type="button" aria-label="Fechar galeria" (click)="closeGallery()">×</button>
+      </header>
+
+      <div class="certificate-grid">
+        <button class="certificate-card" type="button" *ngFor="let certificate of certificates" (click)="selectCertificate(certificate)">
+          <span class="certificate-card__placeholder"></span>
+          <strong>{{ certificate.title }}</strong>
+          <small>{{ certificate.issuer }} • {{ certificate.period }}</small>
+          <p>{{ certificate.description }}</p>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="lightbox-backdrop" *ngIf="selectedCertificate" (click)="closeCertificate()">
+    <article class="lightbox-card" role="dialog" aria-modal="true" (click)="$event.stopPropagation()">
+      <button class="icon-button" type="button" aria-label="Fechar certificado" (click)="closeCertificate()">×</button>
+      <div class="lightbox-card__preview">
+        <span>Placeholder</span>
+      </div>
+      <h3>{{ selectedCertificate.title }}</h3>
+      <strong>{{ selectedCertificate.issuer }} • {{ selectedCertificate.period }}</strong>
+      <p>{{ selectedCertificate.description }}</p>
+    </article>
+  </div>
+</section>

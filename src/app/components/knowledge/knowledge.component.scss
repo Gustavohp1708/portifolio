@@ -1,0 +1,45 @@
+.knowledge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.knowledge-card {
+  min-height: 178px;
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.072), rgba(124, 45, 242, 0.08));
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.knowledge-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-purple);
+}
+
+h3 {
+  margin: 0 0 12px;
+  color: var(--color-lilac);
+  font-size: 1rem;
+}
+
+p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.65;
+}
+
+@media (max-width: 1180px) {
+  .knowledge-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .knowledge-grid {
+    grid-template-columns: 1fr;
+  }
+}

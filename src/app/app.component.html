@@ -1,3 +1,32 @@
-<main class="portfolio-shell">
-  <h1>Portfólio Tech</h1>
-</main>
+<div class="portfolio-layout">
+  <app-sidebar
+    [name]="profile.name"
+    [title]="profile.title"
+    [photoInitials]="profile.photoInitials"
+    [contact]="profile.contact"
+    [stacks]="stacks"
+  ></app-sidebar>
+
+  <main class="main-content">
+    <section class="hero-panel" aria-labelledby="portfolio-title">
+      <p class="hero-panel__eyebrow">Full Stack Developer</p>
+      <h2 id="portfolio-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+      <p>
+        Integer feugiat, mauris sed viverra porttitor, velit ligula sollicitudin sem, in
+        aliquam nibh arcu a sapien.
+      </p>
+    </section>
+
+    <section class="content-section about-section" aria-labelledby="about-title">
+      <app-section-heading title="Sobre"></app-section-heading>
+      <div class="about-card">
+        <p *ngFor="let paragraph of aboutText">{{ paragraph }}</p>
+      </div>
+    </section>
+
+    <app-knowledge [items]="knowledgeItems"></app-knowledge>
+    <app-experience-carousel [experiences]="experiences"></app-experience-carousel>
+    <app-education [items]="educationItems"></app-education>
+    <app-certificates [certificates]="certificates"></app-certificates>
+  </main>
+</div>

@@ -1,0 +1,11 @@
+<section class="content-section" aria-labelledby="education-title">
+  <app-section-heading title="Formação Acadêmica"></app-section-heading>
+  <div class="education-grid">
+    <article class="education-card" *ngFor="let item of items">
+      <span>{{ item.period }}</span>
+      <h3>{{ item.course }}</h3>
+      <strong>{{ item.institution }}</strong>
+      <p>{{ item.description }}</p>
+    </article>
+  </div>
+</section>

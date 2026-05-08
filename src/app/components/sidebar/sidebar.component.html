@@ -1,0 +1,27 @@
+<aside class="sidebar">
+  <div class="profile">
+    <div class="profile__photo" aria-label="Espaço para foto de perfil">
+      <span>{{ photoInitials }}</span>
+    </div>
+    <div>
+      <p class="profile__eyebrow">Portfolio</p>
+      <h1>{{ name }}</h1>
+      <p class="profile__title">{{ title }}</p>
+    </div>
+  </div>
+
+  <section class="sidebar__section" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contato</h2>
+    <a class="contact-link" *ngFor="let item of contact" [href]="item.href" target="_blank" rel="noreferrer">
+      <span>{{ item.label }}</span>
+      <strong>{{ item.value }}</strong>
+    </a>
+  </section>
+
+  <section class="sidebar__section" aria-labelledby="stacks-title">
+    <h2 id="stacks-title">Stacks</h2>
+    <div class="stack-list">
+      <span class="stack-badge" *ngFor="let stack of stacks">{{ stack }}</span>
+    </div>
+  </section>
+</aside>

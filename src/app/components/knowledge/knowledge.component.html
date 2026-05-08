@@ -1,0 +1,9 @@
+<section class="content-section" aria-labelledby="knowledge-title">
+  <app-section-heading title="Conhecimentos"></app-section-heading>
+  <div class="knowledge-grid">
+    <article class="knowledge-card" *ngFor="let item of items">
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.description }}</p>
+    </article>
+  </div>
+</section>
