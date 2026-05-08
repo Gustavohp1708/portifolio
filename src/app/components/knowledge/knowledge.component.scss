@@ -41,5 +41,11 @@ p {
 @media (max-width: 640px) {
   .knowledge-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .knowledge-card {
+    min-height: auto;
+    padding: 18px;
   }
 }

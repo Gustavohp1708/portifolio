@@ -170,12 +170,31 @@ h3 {
 @media (max-width: 700px) {
   .gallery-backdrop,
   .lightbox-backdrop {
-    padding: 14px;
+    align-items: start;
+    padding: 12px;
+  }
+
+  .gallery-modal,
+  .lightbox-card {
+    max-height: calc(100vh - 24px);
+    border-radius: 18px;
+  }
+
+  header {
+    padding: 18px;
+  }
+
+  h2 {
+    font-size: 1.28rem;
   }
 
   .certificate-grid {
     grid-template-columns: 1fr;
     padding: 18px;
+  }
+
+  .certificate-card {
+    min-height: auto;
   }
 
   .lightbox-card {
@@ -184,5 +203,19 @@ h3 {
 
   .lightbox-card__preview {
     min-height: 260px;
+  }
+}
+
+@media (max-width: 420px) {
+  .certificates-button {
+    width: 100%;
+  }
+
+  .certificate-grid {
+    padding: 14px;
+  }
+
+  .lightbox-card__preview {
+    min-height: 210px;
   }
 }

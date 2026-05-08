@@ -18,3 +18,13 @@ h2 {
   font-size: clamp(1.45rem, 3vw, 2rem);
   line-height: 1.1;
 }
+
+@media (max-width: 420px) {
+  .section-heading {
+    gap: 10px;
+  }
+
+  span {
+    width: 28px;
+  }
+}

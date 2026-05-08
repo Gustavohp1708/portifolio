@@ -115,6 +115,7 @@ h2 {
   .sidebar {
     position: relative;
     min-height: auto;
+    padding: 26px clamp(18px, 4vw, 34px);
     border-right: 0;
     border-bottom: 1px solid var(--color-border);
   }
@@ -122,20 +123,55 @@ h2 {
   .profile {
     grid-template-columns: auto 1fr;
     align-items: center;
+    padding-bottom: 22px;
   }
 
   .profile__photo {
     width: 96px;
     border-radius: 18px;
   }
+
+  .sidebar__section {
+    margin-top: 22px;
+  }
+
+  .sidebar__section:first-of-type {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sidebar__section:first-of-type h2 {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 560px) {
   .sidebar {
-    padding: 24px 18px;
+    padding: 22px 14px;
   }
 
   .profile {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .profile__photo {
+    width: 84px;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 12vw, 2.35rem);
+  }
+
+  .sidebar__section:first-of-type {
+    grid-template-columns: 1fr;
+  }
+
+  .stack-list {
+    gap: 8px;
+  }
+
+  .stack-badge {
+    padding: 7px 10px;
+    font-size: 0.78rem;
   }
 }

@@ -41,5 +41,10 @@ p {
 @media (max-width: 720px) {
   .education-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .education-card {
+    padding: 20px;
   }
 }

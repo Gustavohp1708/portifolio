@@ -8,6 +8,7 @@
   justify-self: center;
   width: min(100%, 1080px);
   padding: 36px clamp(20px, 4vw, 48px) 64px;
+  min-width: 0;
 }
 
 .hero-panel,
@@ -93,12 +94,30 @@
 
   .main-content {
     width: 100%;
-    padding-top: 28px;
+    padding: 28px clamp(18px, 4vw, 34px) 56px;
   }
 }
 
 @media (max-width: 560px) {
   .main-content {
-    padding-inline: 16px;
+    padding: 22px 14px 44px;
+  }
+
+  .hero-panel {
+    gap: 12px;
+    border-radius: 18px;
+  }
+
+  .hero-panel__eyebrow {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .hero-panel p:last-child {
+    font-size: 0.96rem;
+  }
+
+  .content-section {
+    margin-top: 34px;
   }
 }

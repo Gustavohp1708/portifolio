@@ -110,6 +110,43 @@ p {
 
 @media (max-width: 720px) {
   .section-toolbar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .experience-section {
+    margin-top: 42px;
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
+
+  .carousel-actions {
+    margin-left: 48px;
+  }
+
+  button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .experience-card {
+    min-height: auto;
+    padding: 22px 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .carousel-actions {
+    margin-left: 38px;
+  }
+
+  button {
+    width: 38px;
+    height: 38px;
+    font-size: 1.45rem;
+  }
+
+  .experience-carousel {
     gap: 12px;
   }
 }
